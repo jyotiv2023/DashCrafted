@@ -1,0 +1,99 @@
+@import "../../styles/responsive.scss";
+
+.navbar {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: 10px;
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+
+    .icon {
+      @include sm {
+        display: none;
+      }
+    }
+
+    .notification {
+      position: relative;
+
+      span {
+        background-color: red;
+        color: white;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+      }
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      // img {
+      //   width: 26px;
+      //   height: 26px;
+      //   border-radius: 50%;
+      //   object-fit: cover;
+      // }
+    }
+    .dropdown {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 4.5rem;
+      right: 1.5rem;
+      width: 120px;
+      padding: 15px;
+      border-radius: 15px;
+      background-color: #fff;
+      border: 1px solid grey;
+      z-index: 1;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        // gap: 0rem;
+      }
+      li {
+        list-style: none;
+        padding: 5px;
+        border: 1px;
+        margin: 5px;
+        cursor: pointer;
+        color: #444;
+        transition: background-color 0.3s;
+      }
+      li:hover {
+        background-color: #ccc;
+        border-radius: 10px;
+        color: #444;
+      }
+    }
+  }
+}
